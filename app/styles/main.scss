@@ -33,12 +33,29 @@ cite {
     line-height: 1.6;
 }
 
+.active-link {
+    background-color: #045FB4;
+
+    a {
+        color: #ffffff;
+    }
+
+    &:hover {
+        a {
+            color: #428bca;
+        }
+    }
+}
 /* Custom page header */
 
 .header-section {
     // margin-bottom: 30px;
     border-bottom: 1px solid #045FB4;
     padding-bottom: 10px;
+}
+
+.nav-pills li {
+    border-radius: 4px;
 }
 
 .content-section {
