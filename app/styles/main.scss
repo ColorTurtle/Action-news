@@ -67,6 +67,25 @@ cite {
     height: inherit;
 }
 
+.btn-menu {
+    background-color: rgb(20, 62, 124);
+    color: white;
+
+    &:hover {
+        color: white;
+        font-weight: bold;
+    }
+
+    &:focus{
+        color: white;
+        font-weight: bold;
+    }
+}
+
+ul.dropdown-menu {
+    background: rgb(95, 167, 207);
+}
+
 .mobile-nav {
     display: none;
 }
@@ -89,7 +108,7 @@ cite {
 .article-content {
     padding-bottom: 10px;
     height: inherit;
-    
+
     img {
         float: left;
         margin-right: 10px;
@@ -128,7 +147,6 @@ cite {
 /* Main marketing message and sign up button */
 .jumbotron {
     border-bottom: 1px solid #e5e5e5;
-    text-align: justify;
     padding: 30px;
 
     img {
@@ -144,6 +162,7 @@ cite {
         margin-bottom: 5px;
         font-size: 18px;
         line-height: 1.6;
+        text-align: justify;
     }
 }
 
@@ -219,7 +238,7 @@ cite {
 @media screen and (max-width: 400px) {
     body {
         background-color: #040C20;
-        color: white;
+        color: rgb(236, 236, 236);
     }
 
     .header-content {
@@ -242,6 +261,10 @@ cite {
     .nav > li > a:hover, .nav > li > a:focus {
         background-color: gray;
         color: #ffffff;
+    }
+
+    .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+        color: black;
     }
 
     .nav-tabs > li > a {

@@ -44,7 +44,7 @@
                             <li class="js-link5"><a href="#link5">Link 5</a></li>
                         </ul>
                         <div class="dropdown mobile-nav">
-                            <button class="btn dropdown-toggle sr-only" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                            <button class="btn btn-menu dropdown-toggle sr-only" type="button" id="dropdownMenu1" data-toggle="dropdown">
                             Menu
                             <span class="caret"></span>
                             </button>
@@ -105,9 +105,9 @@
                                     So many people looked at these:
                                 </h4>
                                 <ul class="cleaner-list">
-                                    <li><a href="">Highly Viewed Artile Link</a></li>
-                                    <li><a href="">Another Highly Viewed Artile Link</a></li>
-                                    <li><a href="">And Yet Another Highly Viewed Artile Link</a></li>
+                                    <li><a href="">Highly Viewed Article Link</a></li>
+                                    <li><a href="">Another Highly Viewed Article Link</a></li>
+                                    <li><a href="">And Yet Another Highly Viewed Article Link</a></li>
                                 </ul>
                               </div>
                               <div class="tab-pane" id="most-commented">
@@ -115,9 +115,9 @@
                                     So many people talked about these:
                                 </h4>
                                 <ul class="cleaner-list">
-                                    <li><a href="">Lots o' Comments Artile Link</a></li>
-                                    <li><a href="">Lots Mo' Comments Artile Link</a></li>
-                                    <li><a href="">Even Mo' Comments Artile Link</a></li>
+                                    <li><a href="">Lots o' Comments Article Link</a></li>
+                                    <li><a href="">Lots Mo' Comments Article Link</a></li>
+                                    <li><a href="">Even Mo' Comments Article Link</a></li>
                                 </ul>
 
                               </div>
@@ -126,9 +126,9 @@
                                     So many people shared these:
                                 </h4>
                                 <ul class="cleaner-list">
-                                    <li><a href="">Popularly Shared Artile Link</a></li>
-                                    <li><a href="">Pretty Popularly Shared Artile Link</a></li>
-                                    <li><a href="">Barely Popularly Shared Artile Link</a></li>
+                                    <li><a href="">Popularly Shared Article Link</a></li>
+                                    <li><a href="">Pretty Popularly Shared Article Link</a></li>
+                                    <li><a href="">Barely Popularly Shared Article Link</a></li>
                                 </ul>
                               </div>
                             </div>
@@ -149,16 +149,22 @@
         <!-- templates for other pages -->
         <!-- Template for article view on home page -->
         <script type="text/template" id="article-template">
-            <p>Here is another article!</p>
             <h2><%= title %></h2>
 
             <cite>by <%= author %></cite>,<span class="date"> (<%= date %>)</span>
             <div class="article-content">
-                <a href="#">
-                    <img class="img-thumbnail"src=<%= image %>>
-                </a>
+                <img class="img-thumbnail"src=<%= image %>>
                 <p><%= summary %>...</p>
-                <a href="#" class="article-link">Read more...</a>
+                <a href=#<%= id %> class="article-link">Read more...</a>
+            </div>
+
+        </script>
+        <script type="text/template" id="articleMain-template">
+            <h2><%= title %></h2>
+            <cite>by <%= author %></cite>,<span class="date"> (<%= date %>)</span>
+            <div class="article-content">
+                <img class="img-thumbnail"src=<%= fullImage %>>
+                <p><%= articleContent %></p>
             </div>
 
         </script>

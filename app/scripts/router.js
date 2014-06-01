@@ -1,68 +1,56 @@
 var MainRouter = Backbone.Router.extend({
 	routes: {
-		""				: "home",
-		"link1"		: "link1",
-		"link2"		: "link2",
-		"link3"		: "link3",
-		"link4"		: "link4",
-		"link5"		: "link5"
+		""						: "home",
+		"link2"				: "linkTwo",
+		"link3"				: "linkThree",
+		"link4"				: "linkFour",
+		"link5"				: "linkFive",
+		"article:id"	: 	"articleMainView"
 	},
 
 	initialize: function(){
-		// this.items = new ArticleCollection();
+		this.items = new ArticleCollection();
 		// this.items.push(articleListItems);
-		// console.log(this.items.models);
+		console.log(this.items.models);
 	},
 
 	home: function(){
-		// $('.main-content').html('');
+		$('.main-content').html('');
+		articleListView.render();
 		console.log('Welcome to the Home Page!');
-		// $(".main-content").html(articleView.render().el);
-
-
-		// new ArticleView();
-		// console.log('Fetch is about to fetch.');
-		// this.items.fetch({
-		// 	success: function(items){
-		// 		items.each(function(item){
-		// 			new ArticleView({model: item});
-		// 			console.log('Fetch finished');
-		// 		});
-		// 	},
-		// 	error: function(){
-		// 		console.log('Houston, we have a problem.')
-		// 	}
-		// });
-		// console.log('Fetch should have completed.');
 	},
 
-	link1: function(){
+	linkTwo: function(){
 		$('.main-content').html('');
-		new LinkOneView();
-		console.log('Link 1 was just clicked.')
-	},
-
-	link2: function(){
-		$('.main-content').html('');
+		console.log('Link 2 was just clicked.');
 		new LinkTwoView();
-		console.log('Link 2 was just clicked.')
 	},
 
-	link3: function(){
+	linkThree: function(){
 		$('.main-content').html('');
+		console.log('Link 3 was just clicked.');
 		new LinkThreeView();
-		console.log('Link 3 was just clicked.')
 	},
 
-	link4: function(){
+	linkFour: function(){
 		$('.main-content').html('');
+		console.log('Link 4 was just clicked.');
 		new LinkFourView();
-		console.log('Link 4 was just clicked.')
 	},
 
-	link5: function(){
+	linkFive: function(){
 		$('.main-content').html('');
+		console.log('Link 5 was just clicked.');
 		new LinkFiveView();
-		console.log('Link 5 was just clicked.')
 	}
+
+	// articleMainView: function(articleId){
+	// 	console.log('Article ' + articleId + ' was just clicked', this.items.models);
+	// 	var item = this.items.find(function(item){
+	// 		console.log('are you seeing the new view?')
+	// 		return item.get('id') == articleId;
+	// 	});
+	// 	new ArticleMainView({model: item})
+	// }
+
 });
