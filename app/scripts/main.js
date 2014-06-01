@@ -5,6 +5,12 @@ $(document).ready(function(){
 	router = new MainRouter();
 	Backbone.history.start();
 
+  // var articleTemplate = _.template($('.article-template').text())
+
+  // // render preloaded data
+  // _.each(articleList, function(item){
+  //   $('.main-content').append(articleTemplate(item))
+  // })
 });
 
 $('.js-link1').on('click', function(){

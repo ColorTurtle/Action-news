@@ -12,7 +12,6 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 /* Space out content a bit */
 body {
     padding-top: 20px;
-    padding-bottom: 20px;
 }
 
 cite {
@@ -31,6 +30,10 @@ cite {
 .cleaner-list {
     padding-left: 20px;
     line-height: 1.6;
+}
+
+.archive-list {
+    font-weight: bold;
 }
 
 .active-link {
@@ -58,13 +61,62 @@ cite {
     border-radius: 4px;
 }
 
+.sr-only {
+    position: relative;
+    width: inherit;
+    height: inherit;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+.tab-widget {
+    a {
+        font-weight: bold;
+    }
+}
+
 .content-section {
     padding-top: 20px;
+}
+
+.date {
+    font-style: italic;
+    font-size: .8em;
+}
+
+.article-content {
+    padding-bottom: 10px;
+    height: inherit;
+    
+    img {
+        float: left;
+        margin-right: 10px;
+        height: inherit;
+    }
+}
+
+.article-link {
+    font-style: italic;
+    font-size: .9em;
+    text-decoration: underline;
+}
+
+.mobile-image {
+    margin-bottom: 15px;
+}
+
+.page-content {
+    img {
+        width: 100%;
+    }
 }
 
 /* Custom page footer */
 .footer {
     padding-top: 19px;
+    padding-bottom: 20px;
     color: #777;
     border-top: 1px solid #e5e5e5;
 }
@@ -76,8 +128,28 @@ cite {
 /* Main marketing message and sign up button */
 .jumbotron {
     border-bottom: 1px solid #e5e5e5;
+    text-align: justify;
+    padding: 30px;
+
     img {
-        width: 100%;
+        // width: 100%;
+    }
+
+    h2 {
+        margin-top: 0px;
+        margin-bottom: 15px;
+    }
+
+    p {
+        margin-bottom: 5px;
+        font-size: 18px;
+        line-height: 1.6;
+    }
+}
+
+.container {
+    .jumbotron {
+        padding: 30px;
     }
 }
 
@@ -120,17 +192,36 @@ cite {
         }
     }
 
+    .desktop-nav {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
     .logo-box {
         text-align: center;
     }
 
     .header-section {
         padding-bottom: 0px;
-}
+    }
+
+    .archive-box {
+        .panel-body {
+            .cleaner-list li {
+                display: inline-block;
+                margin-right: 15px;
+            }
+        }
+    }
 
 }
 
 @media screen and (max-width: 400px) {
+    body {
+        background-color: #040C20;
+        color: white;
+    }
+
     .header-content {
         img {
             width: 100%;
@@ -142,5 +233,57 @@ cite {
         li {
             width: 100%;
         }
+    }
+
+    .nav-pills > li + li {
+        margin-left: 0px;
+    }
+
+    .nav > li > a:hover, .nav > li > a:focus {
+        background-color: gray;
+        color: #ffffff;
+    }
+
+    .nav-tabs > li > a {
+        border: 1px solid #ffffff;
+    }
+
+    .archive-box {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: block;
+        width: 100%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: 1px;
+
+        .btn {
+            border-radius: 0px;
+            text-align: left;
+        }
+    }
+
+    .mobile-image {
+        width: 100%;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+
+    a:hover {
+        color: #ffffff;
+    }
+
+    .jumbotron {
+        background: #091D33;
+        border: 1px solid rgb(23, 40, 70);
+        font-size: 18px;
+    }
+
+    .footer {
+        background-color: #011030;
     }
 }
